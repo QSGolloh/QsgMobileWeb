@@ -1,52 +1,88 @@
-<!DOCTYPE html>
-<html>
-  <head>
-  <meta charset="utf-8">
-  <title>phonegap & jquery mobile boilerplate</title>
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+  <!DOCTYPE html>
+  <html>
+    <head>
+    <!-- <meta charset="utf-8"> -->
+    <title>phonegap & jquery mobile boilerplate</title>
 
-  <link rel="stylesheet"  href="css/jquery.mobile.structure.css" />
-  <link rel="stylesheet" href="css/jquery.mobile.theme.css" />
-  
-  <script>
-    var userAgent = navigator.userAgent + '';
-    if (userAgent.indexOf('iPhone') > -1) {
-      document.write('<script src="js/lib/cordova-iphone.js"></sc' + 'ript>');
-      var mobile_system = 'iphone';
-    } else if (userAgent.indexOf('Android') > -1) {
-      document.write('<script src="js/lib/cordova-android.js"></sc' + 'ript>');
-      var mobile_system = 'android';
-    } else {
-      var mobile_system = '';
-    }
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1">      
+        <link rel = "stylesheet"
+           href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel = "stylesheet"
+           href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+        <script type = "text/javascript"
+           src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+        </script>   
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" /> -->
+
+    <link rel="stylesheet"  href="css/jquery.mobile.structure.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.theme.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+
+    <script>
+      var userAgent = navigator.userAgent + '';
+      if (userAgent.indexOf('iPhone') > -1) {
+        document.write('<script src="js/lib/cordova-iphone.js"></sc' + 'ript>');
+        var mobile_system = 'iphone';
+      } else if (userAgent.indexOf('Android') > -1) {
+        document.write('<script src="js/lib/cordova-android.js"></sc' + 'ript>');
+        var mobile_system = 'android';
+      } else {
+        var mobile_system = '';
+      }
+    </script>
+    
+    <script src="js/lib/jquery.js"></script>
+    <!-- your scripts here -->
+    <script src="js/app/app.js"></script>
+    <script src="js/app/bootstrap.js"></script>
+    <script src="js/lib/jquery.mobile.js"></script>
+
+    </head>
+
+    
+    <body>
+
+      
+      <div data-role="page">
+        <ul id="slide-out" class="side-nav">
+      <li><a href="html/BA.html" target="_self">Business Administration</li>
+          <li><a href="html/Eng.html" target="_self">Engineering</li>
+          <li><a href="html/CS.html" target="_self">Computer Science</li>
+          <li><a href="html/MIS.html" target="_self">Management Information Systems</li>
+    </ul>
+    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+
+        
+      	<div data-role="header">
+      	<h1>Ashesi University College</h1>
+
+      	</div><!-- /header -->
+         
+
+      	<div data-role="content">	
+      		<p>This is a single page boilerplate template of Ashesi University College.
+            Our mission is to educate ethical, entrepreneurial leaders in Africa; to cultivate within students, the critical thinking skills, concern for others, and the courage it will take to transform our continent.</p>
+      		<!--<p>This template is standard HTML document with a single "page"</p> --> 
+      	</div><!-- /content -->
+
+      	<div data-role="footer">
+      		<h4>@QSG</h4>
+      	</div><!-- /footer -->
+
+      </div><!-- /page -->
+      
+    </body>
+<script>
+    // Initialize collapse button
+    // Initialize collapse button
+    $(".button-collapse").sideNav();
+    // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+    //$('.collapsible').collapsible();
+         
+
   </script>
-  
-  <script src="js/lib/jquery.js"></script>
-  <!-- your scripts here -->
-  <script src="js/app/app.js"></script>
-  <script src="js/app/bootstrap.js"></script>
-  <script src="js/lib/jquery.mobile.js"></script>
-  
-  </head>
-  <body>
-    
-    <div data-role="page">
 
-    	<div data-role="header">
-    		<h1>Single page</h1>
-    	</div><!-- /header -->
 
-    	<div data-role="content">	
-    		<p>This is a single page boilerplate template that you can copy to build your first jQuery Mobile page. Each link or form from here will pull a new page in via Ajax to support the animated page transitions.</p>
-    		<p>This template is standard HTML document with a single "page"</p>
-    	</div><!-- /content -->
 
-    	<div data-role="footer">
-    		<h4>Footer content</h4>
-    	</div><!-- /footer -->
-
-    </div><!-- /page -->
-    
-  </body>
-</html>
+  </html>
